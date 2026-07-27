@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:vpp/screens/app_theme.dart';
 import 'package:vpp/screens/splash.dart';
 
@@ -11,10 +12,10 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      title: "Victoria Pe tfood Processors",
-      theme: Themes().lightTheme,
+      title: "Victoria Petfood Processors",
+      theme: ThemeData(fontFamily: 'Inter'),
       darkTheme: Themes().darkTheme,
       themeMode: ThemeMode.light,
       home: const SplashScreen(),

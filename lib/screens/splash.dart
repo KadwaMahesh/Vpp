@@ -1,7 +1,8 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:vpp/screens/app_color.dart';
+import 'package:get/get.dart';
+import 'package:vpp/widgets/app_color.dart';
 import 'package:vpp/screens/onbording.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -16,10 +17,10 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     super.initState();
 
-    Timer(Duration(seconds: 3), () {
+    Timer(Duration(seconds: 3), () async {
       Navigator.pushReplacement(
         context,
-        MaterialPageRoute(builder: (context) => const Onbording()),
+        await Get.off(() => const Onbording()),
       );
     });
   }

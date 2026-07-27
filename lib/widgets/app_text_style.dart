@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:vpp/screens/app_color.dart';
+import 'package:vpp/widgets/app_color.dart';
 
 class AppTextStyle {
   AppTextStyle._();
@@ -12,12 +12,23 @@ class AppTextStyle {
 
   static const TextStyle heading2 = TextStyle(
     fontSize: 22,
+    fontFamily: 'Work Sans',
     fontWeight: FontWeight.w700,
     color: AppColor.primary,
   );
-  static const TextStyle OnbordingHeading = TextStyle(
+  static const TextStyle onboardHeading = TextStyle(
     fontSize: 22,
     fontWeight: FontWeight.w700,
     color: AppColor.background,
+  );
+  static const TextStyle buttonHeading = TextStyle(
+    fontSize: 15,
+    fontWeight: FontWeight.w600,
+    color: AppColor.buttonColor,
+  );
+  static const TextStyle heading3 = TextStyle(
+    fontSize: 15,
+    fontWeight: FontWeight.w600,
+    color: AppColor.progressBar,
   );
 }
