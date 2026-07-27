@@ -19,7 +19,7 @@ class AppTextStyle {
   static const TextStyle onboardHeading = TextStyle(
     fontSize: 22,
     fontWeight: FontWeight.w700,
-    color: AppColor.background,
+    color: AppColor.white,
   );
   static const TextStyle buttonHeading = TextStyle(
     fontSize: 15,

@@ -6,7 +6,7 @@ class AppColor {
   static const Color buttonColor = Color(0xFFD8FEAE);
 
   static const Color pagebackground = Color(0xFFFAFAFA);
-  static const Color background = Color(0xFAFFFFFF);
+  static const Color white = Color(0xFAFFFFFF);
   static const Color progressBar = Color(0xFF283D3C);
   static const Color black = Color(0xFF000000);
   static const Color black54 = Color(0x8A000000);

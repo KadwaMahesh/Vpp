@@ -52,7 +52,7 @@ class OnbordingTwo extends StatelessWidget {
                   SizedBox(height: 8),
                   Text(
                     "Keep track on your requests through the VPP app",
-                    style: TextStyle(fontSize: 17, color: AppColor.background),
+                    style: TextStyle(fontSize: 17, color: AppColor.white),
                     textAlign: TextAlign.center,
                   ),
                   SizedBox(height: 41),
@@ -68,13 +68,13 @@ class OnbordingTwo extends StatelessWidget {
                           style: TextStyle(
                             fontSize: 20,
                             fontWeight: FontWeight.w600,
-                            color: AppColor.background,
+                            color: AppColor.white,
                           ),
                         ),
                       ),
                       Row(
                         children: [
-                          Dot(height: 8, width: 8, color: AppColor.background),
+                          Dot(height: 8, width: 8, color: AppColor.white),
                           const SizedBox(width: 4), // 4px horizontal space
                           Dot(
                             height: 8,

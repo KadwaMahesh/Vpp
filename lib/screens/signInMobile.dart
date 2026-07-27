@@ -22,7 +22,7 @@ class _SignInMobileState extends State<SignInMobile> {
         preferredSize: const Size.fromHeight(110),
         child: AppBar(
           automaticallyImplyLeading: false,
-          backgroundColor: AppColor.background,
+          backgroundColor: AppColor.white,
           elevation: 0,
           flexibleSpace: SafeArea(
             child: Padding(
@@ -80,6 +80,23 @@ class _SignInMobileState extends State<SignInMobile> {
                 buttonText: 'Next',
                 onPressed: () {},
                 backgroundColor: AppColor.progressBar,
+              ),
+              SizedBox(height: 16),
+              SizedBox(
+                height: 52,
+                width: double.infinity,
+                child: Center(
+                  child: Text(
+                    "Resend",
+                    style: TextStyle(
+                      fontSize: 17,
+                      fontWeight: FontWeight.w600,
+                      color: AppColor.progressBar,
+                      fontFamily: 'Roboto Flex',
+                    ),
+                    textAlign: TextAlign.center,
+                  ),
+                ),
               ),
             ],
           ),

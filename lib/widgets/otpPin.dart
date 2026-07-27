@@ -54,8 +54,14 @@ class _OtpPinWidgetState extends State<OtpPinWidget> {
             textAlign: TextAlign.center,
             maxLength: 1,
             decoration: InputDecoration(
+              filled: true,
+              fillColor: AppColor.white,
               counterText: '',
               border: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(8),
+                borderSide: BorderSide(color: AppColor.border, width: 1),
+              ),
+              enabledBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(8),
                 borderSide: BorderSide(color: AppColor.border, width: 1),
               ),

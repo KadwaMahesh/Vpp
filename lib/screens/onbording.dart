@@ -53,7 +53,7 @@ class Onbording extends StatelessWidget {
                   SizedBox(height: 8),
                   Text(
                     "Submit a request for live stock or dead animal collection through the VPP app",
-                    style: TextStyle(fontSize: 17, color: AppColor.background),
+                    style: TextStyle(fontSize: 17, color: AppColor.white),
                     textAlign: TextAlign.center,
                   ),
                   SizedBox(height: 41),
@@ -69,7 +69,7 @@ class Onbording extends StatelessWidget {
                           style: TextStyle(
                             fontSize: 20,
                             fontWeight: FontWeight.w600,
-                            color: AppColor.background,
+                            color: AppColor.white,
                           ),
                         ),
                       ),
@@ -81,7 +81,7 @@ class Onbording extends StatelessWidget {
                             color: AppColor.buttonColor,
                           ),
                           const SizedBox(width: 4), // 4px horizontal space
-                          Dot(height: 8, width: 8, color: AppColor.background),
+                          Dot(height: 8, width: 8, color: AppColor.white),
                         ],
                       ),
                       TextButton(

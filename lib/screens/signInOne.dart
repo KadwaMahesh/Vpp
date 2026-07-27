@@ -27,7 +27,7 @@ class _SignInOneState extends State<SignInOne> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColor.background,
+      backgroundColor: AppColor.white,
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 16.0),
@@ -134,21 +134,21 @@ class _SignInOneState extends State<SignInOne> {
                           TextButtonOne(
                             buttonText: "Continue with Google",
                             onPressed: () {},
-                            backgroundColor: AppColor.background,
+                            backgroundColor: AppColor.white,
                             borderColor: AppColor.buttonBorder,
                             imagePath: "assets/images/logo google.png",
                           ),
                           TextButtonOne(
                             buttonText: "Continue with Facebook",
                             onPressed: () {},
-                            backgroundColor: AppColor.background,
+                            backgroundColor: AppColor.white,
                             borderColor: AppColor.buttonBorder,
                             imagePath: "assets/images/facebook.png",
                           ),
                           TextButtonOne(
                             buttonText: "Continue with Apple",
                             onPressed: () {},
-                            backgroundColor: AppColor.background,
+                            backgroundColor: AppColor.white,
                             borderColor: AppColor.buttonBorder,
                             imagePath: "assets/images/applelogo.png",
                           ),
