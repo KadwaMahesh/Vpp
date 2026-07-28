@@ -68,7 +68,7 @@ class _OtpPinWidgetState extends State<OtpPinWidget> {
               focusedBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(8),
                 borderSide: const BorderSide(
-                  color: AppColor.buttonColor,
+                  color: AppColor.buttonText,
                   width: 1,
                 ),
               ),

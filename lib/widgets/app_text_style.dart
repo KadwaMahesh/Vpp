@@ -23,12 +23,14 @@ class AppTextStyle {
   );
   static const TextStyle buttonHeading = TextStyle(
     fontSize: 15,
+    fontFamily: 'Inter',
     fontWeight: FontWeight.w600,
-    color: AppColor.buttonColor,
+    color: AppColor.buttonText,
   );
   static const TextStyle heading3 = TextStyle(
     fontSize: 15,
+    fontFamily: 'Inter',
     fontWeight: FontWeight.w600,
-    color: AppColor.progressBar,
+    color: AppColor.black,
   );
 }

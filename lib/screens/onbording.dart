@@ -75,11 +75,7 @@ class Onbording extends StatelessWidget {
                       ),
                       Row(
                         children: [
-                          Dot(
-                            height: 8,
-                            width: 16,
-                            color: AppColor.buttonColor,
-                          ),
+                          Dot(height: 8, width: 16, color: AppColor.buttonText),
                           const SizedBox(width: 4), // 4px horizontal space
                           Dot(height: 8, width: 8, color: AppColor.white),
                         ],
@@ -93,7 +89,7 @@ class Onbording extends StatelessWidget {
                           style: TextStyle(
                             fontSize: 20,
                             fontWeight: FontWeight.w600,
-                            color: AppColor.buttonColor,
+                            color: AppColor.buttonText,
                           ),
                         ),
                       ),

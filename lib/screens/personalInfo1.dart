@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:get/get_navigation/src/extension_navigation.dart';
 import 'package:vpp/widgets/app_color.dart';
 import 'package:vpp/widgets/app_text_style.dart';
+import 'package:vpp/widgets/progressBar.dart';
 
 class PersonalInfo extends StatelessWidget {
   const PersonalInfo({super.key});
@@ -46,7 +46,9 @@ class PersonalInfo extends StatelessWidget {
       ),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 16.0),
-        child: Column(children: []),
+        child: Column(
+          children: [SizedBox(height: 8), LinearProgressBar(value: 0.3)],
+        ),
       ),
     );
   }

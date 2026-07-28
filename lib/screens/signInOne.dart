@@ -41,7 +41,7 @@ class _SignInOneState extends State<SignInOne> {
                       height: 60,
                       width: 60,
                       decoration: BoxDecoration(
-                        color: AppColor.buttonColor,
+                        color: AppColor.buttonText,
                         borderRadius: BorderRadius.circular(16),
                       ),
                       child: Center(
@@ -50,7 +50,7 @@ class _SignInOneState extends State<SignInOne> {
                           style: TextStyle(
                             fontSize: 20,
                             fontWeight: FontWeight.w800,
-                            color: AppColor.progressBar,
+                            color: AppColor.buttonColor,
                           ),
                         ),
                       ),
@@ -72,7 +72,7 @@ class _SignInOneState extends State<SignInOne> {
                       controller: _emailController,
                       borderColor: AppColor.border,
                       hintText: "Email or mobile",
-                      focusBorder: AppColor.buttonColor,
+                      focusBorder: AppColor.buttonText,
                       labelText: "Email or mobile",
                     ),
                     SizedBox(height: 12),
@@ -86,7 +86,7 @@ class _SignInOneState extends State<SignInOne> {
                         );
                         // Handle button press
                       },
-                      backgroundColor: AppColor.progressBar,
+                      backgroundColor: AppColor.buttonColor,
                     ),
                     SizedBox(height: 12),
                     Row(

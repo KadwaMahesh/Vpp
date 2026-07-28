@@ -84,7 +84,7 @@ class _SignInMobileState extends State<SignInMobile> {
                 onPressed: () {
                   Get.to(() => PersonalInfo());
                 },
-                backgroundColor: AppColor.progressBar,
+                backgroundColor: AppColor.buttonColor,
               ),
               SizedBox(height: 16),
               SizedBox(

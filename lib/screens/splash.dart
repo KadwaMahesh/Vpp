@@ -29,14 +29,14 @@ class _SplashScreenState extends State<SplashScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        color: AppColor.buttonColor,
+        color: AppColor.buttonText,
         child: const Center(
           child: Text(
             "VPP",
             style: TextStyle(
               fontSize: 32,
               fontWeight: FontWeight.w800,
-              color: AppColor.progressBar,
+              color: AppColor.buttonColor,
             ),
           ),
         ),
