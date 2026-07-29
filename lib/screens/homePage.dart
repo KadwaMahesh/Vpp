@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:get/get_core/src/get_main.dart';
+import 'package:get/get_navigation/src/extension_navigation.dart';
+import 'package:vpp/screens/picUpDate.dart';
 import 'package:vpp/widgets/app_color.dart';
 import 'package:vpp/widgets/app_text_style.dart';
+import 'package:vpp/widgets/button.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -10,7 +14,7 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       backgroundColor: AppColor.pagebackground,
       appBar: PreferredSize(
-        preferredSize: const Size.fromHeight(289),
+        preferredSize: const Size.fromHeight(259),
         child: AppBar(
           automaticallyImplyLeading: false,
           backgroundColor: AppColor.buttonColor,
@@ -19,8 +23,9 @@ class HomePage extends StatelessWidget {
             child: Padding(
               padding: EdgeInsetsGeometry.only(left: 16, top: 10, right: 16),
               child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
+                  SizedBox(height: 10),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
@@ -43,16 +48,28 @@ class HomePage extends StatelessWidget {
                       ),
                     ],
                   ),
-                  SizedBox(height: 14),
-                  Padding(
-                    padding: const EdgeInsets.only(left: 10.0),
-                    child: Text(
-                      'Ready to make a request?',
-                      style: AppTextStyle.heading2.copyWith(
-                        color: Color(0xFAEFF4F1),
-                      ),
-                      textAlign: TextAlign.center,
+                  SizedBox(height: 28),
+                  Text(
+                    'Ready to make a request?',
+                    style: AppTextStyle.heading2.copyWith(
+                      color: Color(0xFAEFF4F1),
                     ),
+                  ),
+                  SizedBox(height: 8),
+                  Text(
+                    'Start your request for livestock collection ',
+                    style: AppTextStyle.heading1.copyWith(
+                      color: Color(0xFAEFF4F1),
+                    ),
+                  ),
+                  SizedBox(height: 24),
+                  CustomButton(
+                    buttonText: 'Start Request',
+                    onPressed: () {
+                      Get.to(() => PicUpDate());
+                    },
+                    backgroundColor: AppColor.buttonText,
+                    textColor: AppColor.buttonColor,
                   ),
                 ],
               ),

@@ -4,6 +4,13 @@ import 'package:vpp/widgets/app_color.dart';
 class AppTextStyle {
   AppTextStyle._();
 
+  static const TextStyle textHeading = TextStyle(
+    fontSize: 28,
+    fontWeight: FontWeight.w600,
+    fontFamily: 'Work Sans',
+    color: AppColor.buttonColor,
+  );
+
   static const TextStyle heading1 = TextStyle(
     fontSize: 17,
     fontWeight: FontWeight.w400,

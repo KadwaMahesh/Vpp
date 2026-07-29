@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:vpp/widgets/app_color.dart';
 import 'package:vpp/widgets/app_text_style.dart';
 
 class CustomButton extends StatefulWidget {
@@ -7,11 +8,13 @@ class CustomButton extends StatefulWidget {
     required this.buttonText,
     required this.onPressed,
     required this.backgroundColor,
+    this.textColor = AppColor.buttonText,
   });
 
   final String buttonText;
   final VoidCallback onPressed;
   final Color backgroundColor;
+  final Color textColor;
 
   @override
   State<CustomButton> createState() => _CustomButtonState();
@@ -32,7 +35,10 @@ class _CustomButtonState extends State<CustomButton> {
           ),
           // padding: const EdgeInsets.symmetric(vertical: 16.0),
         ),
-        child: Text(widget.buttonText, style: AppTextStyle.buttonHeading),
+        child: Text(
+          widget.buttonText,
+          style: AppTextStyle.buttonHeading.copyWith(color: widget.textColor),
+        ),
       ),
     );
   }
