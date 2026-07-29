@@ -6,8 +6,8 @@ import 'package:vpp/widgets/app_text_style.dart';
 import 'package:vpp/widgets/button.dart';
 import 'package:vpp/widgets/progressBar.dart';
 
-class PicUpDate extends StatelessWidget {
-  const PicUpDate({super.key});
+class PicUpLocation extends StatelessWidget {
+  const PicUpLocation({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -34,7 +34,7 @@ class PicUpDate extends StatelessWidget {
                     icon: Icon(Icons.arrow_back, color: AppColor.buttonColor),
                   ),
 
-                  Text('Date of pick up', style: AppTextStyle.textHeading),
+                  Text('Pick up location', style: AppTextStyle.textHeading),
                   SizedBox(height: 8),
                   LinearProgressBar(value: 0.2),
                 ],
@@ -56,22 +56,12 @@ class PicUpDate extends StatelessWidget {
                       style: AppTextStyle.heading1,
                     ),
                     SizedBox(height: 16),
-                    CalendarDatePicker(
-                      initialDate: DateTime.now(),
-                      firstDate: DateTime(1990, 1, 1),
-                      lastDate: DateTime(2100, 12, 31),
-                      onDateChanged: (DateTime date) {
-                        print(date);
-                      },
-                    ),
                   ],
                 ),
               ),
               CustomButton(
                 buttonText: 'Next',
-                onPressed: () {
-                  Get.to(() => StockType());
-                },
+                onPressed: () {},
                 backgroundColor: AppColor.buttonColor,
               ),
               SizedBox(height: 8),
