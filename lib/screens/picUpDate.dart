@@ -1,19 +1,45 @@
 import 'package:flutter/material.dart';
 import 'package:get/route_manager.dart';
+import 'package:calendar_date_picker2/calendar_date_picker2.dart';
 import 'package:vpp/screens/stockType.dart';
 import 'package:vpp/widgets/app_color.dart';
 import 'package:vpp/widgets/app_text_style.dart';
 import 'package:vpp/widgets/button.dart';
 import 'package:vpp/widgets/progressBar.dart';
 
-class PicUpDate extends StatelessWidget {
+class PicUpDate extends StatefulWidget {
   const PicUpDate({super.key});
 
   @override
+  State<PicUpDate> createState() => _PicUpDateState();
+}
+
+class _PicUpDateState extends State<PicUpDate> {
+  DateTime selectedDate = DateTime.now();
+
+  @override
   Widget build(BuildContext context) {
+    final config = CalendarDatePicker2Config(
+      calendarType: CalendarDatePicker2Type.single,
+      firstDate: DateTime(1990, 1, 1),
+      lastDate: DateTime(2100, 12, 31),
+      currentDate: DateTime.now(),
+      selectedDayHighlightColor: AppColor.buttonColor,
+      weekdayLabels: const ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
+      weekdayLabelTextStyle: TextStyle(
+        fontSize: 13,
+        fontWeight: FontWeight.w600,
+        color: const Color(0xFF3C3C43).withOpacity(0.3),
+      ),
+      controlsTextStyle: const TextStyle(
+        fontSize: 15,
+        fontWeight: FontWeight.w600,
+        color: Color(0xFF3C3C43),
+      ),
+    );
+
     return Scaffold(
       backgroundColor: AppColor.pagebackground,
-
       appBar: PreferredSize(
         preferredSize: const Size.fromHeight(135),
         child: AppBar(
@@ -22,7 +48,7 @@ class PicUpDate extends StatelessWidget {
           elevation: 0,
           flexibleSpace: SafeArea(
             child: Padding(
-              padding: EdgeInsetsGeometry.only(left: 12, top: 18, right: 12),
+              padding: const EdgeInsets.only(left: 12, top: 18, right: 12),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -33,9 +59,8 @@ class PicUpDate extends StatelessWidget {
                     },
                     icon: Icon(Icons.arrow_back, color: AppColor.buttonColor),
                   ),
-
                   Text('Date of pick up', style: AppTextStyle.textHeading),
-                  SizedBox(height: 8),
+                  const SizedBox(height: 8),
                   LinearProgressBar(value: 0.2),
                 ],
               ),
@@ -45,7 +70,7 @@ class PicUpDate extends StatelessWidget {
       ),
       body: SafeArea(
         child: Padding(
-          padding: EdgeInsetsGeometry.symmetric(horizontal: 16),
+          padding: const EdgeInsets.symmetric(horizontal: 16),
           child: Column(
             children: [
               Expanded(
@@ -55,13 +80,16 @@ class PicUpDate extends StatelessWidget {
                       'Pick up will occur before 4pm on the day selected',
                       style: AppTextStyle.heading1,
                     ),
-                    SizedBox(height: 16),
-                    CalendarDatePicker(
-                      initialDate: DateTime.now(),
-                      firstDate: DateTime(1990, 1, 1),
-                      lastDate: DateTime(2100, 12, 31),
-                      onDateChanged: (DateTime date) {
-                        print(date);
+                    const SizedBox(height: 16),
+                    CalendarDatePicker2(
+                      config: config,
+                      value: [selectedDate],
+                      onValueChanged: (dates) {
+                        if (dates.isNotEmpty && dates.first != null) {
+                          setState(() {
+                            selectedDate = dates.first!;
+                          });
+                        }
                       },
                     ),
                   ],
@@ -70,11 +98,11 @@ class PicUpDate extends StatelessWidget {
               CustomButton(
                 buttonText: 'Next',
                 onPressed: () {
-                  Get.to(() => StockType());
+                  Get.to(() => const StockType());
                 },
                 backgroundColor: AppColor.buttonColor,
               ),
-              SizedBox(height: 8),
+              const SizedBox(height: 8),
             ],
           ),
         ),
