@@ -40,4 +40,10 @@ class AppTextStyle {
     fontWeight: FontWeight.w600,
     color: AppColor.black,
   );
+  static const TextStyle profileHeading = TextStyle(
+    fontSize: 17,
+    fontFamily: 'Work Sans',
+    fontWeight: FontWeight.w600,
+    color: AppColor.primary,
+  );
 }

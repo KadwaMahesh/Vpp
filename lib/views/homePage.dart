@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_navigation/src/extension_navigation.dart';
+import 'package:vpp/controllers/settings_controller.dart';
 import 'package:vpp/views/picUpDate.dart';
 import 'package:vpp/views/settings.dart';
 import 'package:vpp/widgets/app_color.dart';
@@ -41,6 +43,7 @@ class HomePage extends StatelessWidget {
                           padding: EdgeInsets.zero,
                           constraints: const BoxConstraints(),
                           onPressed: () {
+                            Get.put(SettingsController());
                             Get.to(() => SettingsPage());
                           },
                           icon: const Icon(

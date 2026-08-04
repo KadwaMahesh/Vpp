@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:vpp/widgets/app_color.dart';
 
 class SettingsTile extends StatelessWidget {
   final IconData icon;
@@ -19,18 +20,10 @@ class SettingsTile extends StatelessWidget {
     return InkWell(
       onTap: onTap,
       child: Padding(
-        padding: const EdgeInsets.symmetric(vertical: 14),
+        padding: const EdgeInsets.symmetric(vertical: 12),
         child: Row(
           children: [
-            Container(
-              width: 36,
-              height: 36,
-              decoration: BoxDecoration(
-                border: Border.all(color: Colors.grey.shade300),
-                shape: BoxShape.circle,
-              ),
-              child: Icon(icon, size: 18, color: Colors.black87),
-            ),
+            Icon(icon, size: 24, color: Colors.black87),
             const SizedBox(width: 16),
 
             Expanded(
@@ -40,14 +33,13 @@ class SettingsTile extends StatelessWidget {
                   Text(
                     title,
                     style: const TextStyle(
-                      fontSize: 15,
-                      fontWeight: FontWeight.w600,
+                      fontSize: 17,
+                      color: AppColor.primary,
                     ),
                   ),
-                  const SizedBox(height: 3),
                   Text(
                     subtitle,
-                    style: TextStyle(fontSize: 12, color: Colors.grey.shade500),
+                    style: TextStyle(fontSize: 12, color: AppColor.secondary),
                   ),
                 ],
               ),

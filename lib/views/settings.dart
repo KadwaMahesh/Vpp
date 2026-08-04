@@ -46,6 +46,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:vpp/widgets/app_color.dart';
+import 'package:vpp/widgets/app_text_style.dart';
 
 import '../controllers/settings_controller.dart';
 import '../widgets/settings_tile.dart';
@@ -65,7 +67,7 @@ class SettingsPage extends GetView<SettingsController> {
         return Icons.help_outline;
 
       case "about":
-        return Icons.info_outline;
+        return Icons.menu_book_outlined;
 
       default:
         return Icons.circle;
@@ -85,30 +87,24 @@ class SettingsPage extends GetView<SettingsController> {
           icon: const Icon(Icons.arrow_back, color: Colors.black),
           onPressed: () => Get.back(),
         ),
-        title: const Text(
-          "Settings",
-          style: TextStyle(
-            color: Colors.black,
-            fontWeight: FontWeight.w600,
-            fontSize: 16,
-          ),
-        ),
+        title: const Text("Settings", style: AppTextStyle.profileHeading),
       ),
 
       body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 20),
-        child: ListView.separated(
+        padding: const EdgeInsets.symmetric(horizontal: 16),
+        child: ListView.builder(
           itemCount: controller.settings.length,
-          separatorBuilder: (_, __) =>
-              Divider(height: 1, color: Colors.grey.shade200),
           itemBuilder: (context, index) {
             final item = controller.settings[index];
 
-            return SettingsTile(
-              icon: _getIcon(item["icon"]!),
-              title: item["title"]!,
-              subtitle: item["subtitle"]!,
-              onTap: () {},
+            return Padding(
+              padding: const EdgeInsets.only(bottom: 8.0),
+              child: SettingsTile(
+                icon: _getIcon(item["icon"]!),
+                title: item["title"]!,
+                subtitle: item["subtitle"]!,
+                onTap: () {},
+              ),
             );
           },
         ),

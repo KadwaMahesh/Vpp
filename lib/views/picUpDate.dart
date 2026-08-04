@@ -47,7 +47,7 @@ class _PicUpDateState extends State<PicUpDate> {
           child: Column(
             children: [
               PreferredSize(
-                preferredSize: const Size.fromHeight(135),
+                preferredSize: const Size.fromHeight(120),
                 child: AppBar(
                   automaticallyImplyLeading: false,
                   backgroundColor: AppColor.pagebackground,
@@ -55,7 +55,7 @@ class _PicUpDateState extends State<PicUpDate> {
                   flexibleSpace: SafeArea(
                     child: Padding(
                       padding: const EdgeInsets.only(
-                        left: 12,
+                        left: 2,
                         top: 18,
                         right: 12,
                       ),
@@ -69,15 +69,17 @@ class _PicUpDateState extends State<PicUpDate> {
                             },
                             icon: Icon(
                               Icons.arrow_back,
+                              size: 24,
                               color: AppColor.buttonColor,
                             ),
                           ),
-                          Text(
-                            'Date of pick up',
-                            style: AppTextStyle.textHeading,
+                          Padding(
+                            padding: const EdgeInsets.only(left: 10.0),
+                            child: Text(
+                              'Date of pick up',
+                              style: AppTextStyle.textHeading,
+                            ),
                           ),
-                          const SizedBox(height: 8),
-                          LinearProgressBar(value: 0.2),
                         ],
                       ),
                     ),
@@ -89,6 +91,7 @@ class _PicUpDateState extends State<PicUpDate> {
                   padding: const EdgeInsets.symmetric(horizontal: 16),
                   child: Column(
                     children: [
+                      LinearProgressBar(value: 0.2),
                       SizedBox(height: 16),
                       Text(
                         'Pick up will occur before 4pm on the day selected',
