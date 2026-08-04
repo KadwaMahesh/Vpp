@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_navigation/src/extension_navigation.dart';
-import 'package:vpp/screens/picUpDate.dart';
-import 'package:vpp/screens/settings.dart';
+import 'package:vpp/views/picUpDate.dart';
+import 'package:vpp/views/settings.dart';
 import 'package:vpp/widgets/app_color.dart';
 import 'package:vpp/widgets/app_text_style.dart';
 import 'package:vpp/widgets/button.dart';

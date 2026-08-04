@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:vpp/screens/signInOne.dart';
-import 'package:vpp/widgets/Dot.dart';
 import 'package:vpp/widgets/app_color.dart';
 import 'package:vpp/widgets/app_text_style.dart';
+import 'package:vpp/views/onbording2.dart';
+import 'package:vpp/views/signInOne.dart';
+import 'package:vpp/widgets/Dot.dart';
 
-class OnbordingTwo extends StatelessWidget {
-  const OnbordingTwo({super.key});
+class Onbording extends StatelessWidget {
+  const Onbording({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -45,13 +46,13 @@ class OnbordingTwo extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Text(
-                    'Track requests',
+                    'Request collection',
                     style: AppTextStyle.onboardHeading,
                     textAlign: TextAlign.center,
                   ),
                   SizedBox(height: 8),
                   Text(
-                    "Keep track on your requests through the VPP app",
+                    "Submit a request for live stock or dead animal collection through the VPP app",
                     style: TextStyle(fontSize: 17, color: AppColor.white),
                     textAlign: TextAlign.center,
                   ),
@@ -74,14 +75,14 @@ class OnbordingTwo extends StatelessWidget {
                       ),
                       Row(
                         children: [
-                          Dot(height: 8, width: 8, color: AppColor.white),
-                          const SizedBox(width: 4), // 4px horizontal space
                           Dot(height: 8, width: 16, color: AppColor.buttonText),
+                          const SizedBox(width: 4), // 4px horizontal space
+                          Dot(height: 8, width: 8, color: AppColor.white),
                         ],
                       ),
                       TextButton(
                         onPressed: () {
-                          Get.to(() => const SignInOne());
+                          Get.to(() => const OnbordingTwo());
                         },
                         child: Text(
                           'Next',

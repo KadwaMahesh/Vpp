@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/route_manager.dart';
 import 'package:calendar_date_picker2/calendar_date_picker2.dart';
-import 'package:vpp/screens/stockType.dart';
+import 'package:vpp/views/stockType.dart';
 import 'package:vpp/widgets/app_color.dart';
 import 'package:vpp/widgets/app_text_style.dart';
 import 'package:vpp/widgets/button.dart';

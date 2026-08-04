@@ -1,23 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_navigation/src/extension_navigation.dart';
-import 'package:vpp/screens/personalInfo3.dart';
+import 'package:vpp/views/homePage.dart';
 import 'package:vpp/widgets/app_color.dart';
 import 'package:vpp/widgets/app_text_style.dart';
 import 'package:vpp/widgets/button.dart';
 import 'package:vpp/widgets/progressBar.dart';
 import 'package:vpp/widgets/textField.dart';
 
-class PersonalInfoTwo extends StatefulWidget {
-  const PersonalInfoTwo({super.key});
+class PersonalInfoThree extends StatefulWidget {
+  const PersonalInfoThree({super.key});
 
   @override
-  State<PersonalInfoTwo> createState() => _PersonalInfoTwoState();
+  State<PersonalInfoThree> createState() => _PersonalInfoThreeState();
 }
 
-class _PersonalInfoTwoState extends State<PersonalInfoTwo> {
-  final TextEditingController _farmLocation = TextEditingController();
-
+class _PersonalInfoThreeState extends State<PersonalInfoThree> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -47,7 +45,7 @@ class _PersonalInfoTwoState extends State<PersonalInfoTwo> {
                       ),
                       TextButton(
                         onPressed: () {
-                          Get.to(() => PersonalInfoThree());
+                          Get.to(() => HomePage());
                         },
                         child: Text('Skip', style: AppTextStyle.heading1),
                       ),
@@ -56,7 +54,7 @@ class _PersonalInfoTwoState extends State<PersonalInfoTwo> {
                   SizedBox(height: 14),
                   Padding(
                     padding: const EdgeInsets.only(left: 10.0),
-                    child: Text('Farm Location', style: AppTextStyle.heading2),
+                    child: Text('Bank Details', style: AppTextStyle.heading2),
                   ),
                 ],
               ),
@@ -73,22 +71,20 @@ class _PersonalInfoTwoState extends State<PersonalInfoTwo> {
                 child: Column(
                   children: [
                     SizedBox(height: 8),
-                    LinearProgressBar(value: 0.5),
+                    LinearProgressBar(value: 0.7),
                     SizedBox(height: 16),
                     Align(
                       alignment: Alignment.centerLeft,
                       child: Text(
-                        'Add your location.',
+                        'Set up your bank account with [Payment Gateway] to easily send and receive payments.',
                         style: AppTextStyle.heading1,
                       ),
                     ),
                     SizedBox(height: 12),
-                    TextFromField(
-                      borderColor: AppColor.border,
-                      hintText: 'Farm location',
-                      focusBorder: AppColor.buttonText,
-                      labelText: 'Farm location',
-                      controller: _farmLocation,
+                    CustomButton(
+                      buttonText: 'Link account',
+                      onPressed: () {},
+                      backgroundColor: AppColor.buttonColor,
                     ),
                   ],
                 ),
@@ -96,7 +92,7 @@ class _PersonalInfoTwoState extends State<PersonalInfoTwo> {
               CustomButton(
                 buttonText: 'Next',
                 onPressed: () {
-                  Get.to(() => PersonalInfoThree());
+                  Get.to(() => HomePage());
                 },
                 backgroundColor: AppColor.buttonColor,
               ),

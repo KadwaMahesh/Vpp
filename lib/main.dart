@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
-import 'package:vpp/screens/app_theme.dart';
-import 'package:vpp/screens/splash.dart';
+import 'package:vpp/views/app_theme.dart';
+import 'package:vpp/views/splash.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();

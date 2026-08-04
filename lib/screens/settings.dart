@@ -20,6 +20,26 @@ class SettingsPage extends StatelessWidget {
         ),
         title: Text('Settings', style: AppTextStyle.textHeading),
       ),
+      body: SafeArea(
+        child: Padding(
+          padding: EdgeInsets.symmetric(horizontal: 16),
+          child: Column(
+            children: [
+              ListView.builder(
+                itemBuilder: (BuildContext context, int index) {
+                  return ListTile(
+                    title: Text('Setting ${index + 1}'),
+                    trailing: Icon(Icons.arrow_forward),
+                    onTap: () {
+                      // Handle setting item tap
+                    },
+                  );
+                },
+              ),
+            ],
+          ),
+        ),
+      ),
     );
   }
 }

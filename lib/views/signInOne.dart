@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:vpp/widgets/app_color.dart';
 import 'package:vpp/widgets/app_text_style.dart';
-import 'package:vpp/screens/signInMobile.dart';
+import 'package:vpp/views/signInMobile.dart';
 import 'package:vpp/widgets/button.dart';
 import 'package:vpp/widgets/textField.dart';
 import 'package:vpp/widgets/text_button.dart';

@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:get/route_manager.dart';
-import 'package:vpp/screens/stockQuantity.dart';
+import 'package:vpp/views/stockType.dart';
 import 'package:vpp/widgets/app_color.dart';
 import 'package:vpp/widgets/app_text_style.dart';
 import 'package:vpp/widgets/button.dart';
 import 'package:vpp/widgets/progressBar.dart';
 
-class StockType extends StatelessWidget {
-  const StockType({super.key});
+class PicUpLocation extends StatelessWidget {
+  const PicUpLocation({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -34,9 +34,9 @@ class StockType extends StatelessWidget {
                     icon: Icon(Icons.arrow_back, color: AppColor.buttonColor),
                   ),
 
-                  Text('Select Stock Type', style: AppTextStyle.textHeading),
+                  Text('Pick up location', style: AppTextStyle.textHeading),
                   SizedBox(height: 8),
-                  LinearProgressBar(value: 0.4),
+                  LinearProgressBar(value: 0.2),
                 ],
               ),
             ),
@@ -48,15 +48,20 @@ class StockType extends StatelessWidget {
           padding: EdgeInsetsGeometry.symmetric(horizontal: 16),
           child: Column(
             children: [
-              Expanded(child: Column(children: [
-                    
+              Expanded(
+                child: Column(
+                  children: [
+                    Text(
+                      'Pick up will occur before 4pm on the day selected',
+                      style: AppTextStyle.heading1,
+                    ),
+                    SizedBox(height: 16),
                   ],
-                )),
+                ),
+              ),
               CustomButton(
                 buttonText: 'Next',
-                onPressed: () {
-                  Get.to(() => StockQuantity());
-                },
+                onPressed: () {},
                 backgroundColor: AppColor.buttonColor,
               ),
               SizedBox(height: 8),
