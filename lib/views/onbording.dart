@@ -80,7 +80,7 @@ class _PageViewExampleState extends State<PageViewExample> {
                     AppColor.black54,
                     AppColor.black,
                   ],
-                  stops: [0.0, 0.55, 0.85, 1.0],
+                  stops: [0.0, 0.55, 0.93, 1.0],
                 ),
               ),
             ),
@@ -121,6 +121,7 @@ class _PageViewExampleState extends State<PageViewExample> {
                       _descriptions[index],
                       style: const TextStyle(
                         fontSize: 17,
+                        fontFamily: 'Inter',
                         color: AppColor.white,
                       ),
                       textAlign: TextAlign.center,
