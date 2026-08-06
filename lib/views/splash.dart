@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:vpp/views/signInEmail.dart';
 import 'package:vpp/widgets/app_color.dart';
 import 'package:vpp/views/onbording.dart';
 
@@ -20,7 +21,8 @@ class _SplashScreenState extends State<SplashScreen> {
     Timer(Duration(seconds: 3), () async {
       Navigator.pushReplacement(
         context,
-        await Get.off(() => const Onbording()),
+        // await Get.off(() => const Onbording()),
+        await Get.off(() => PageViewExample()),
       );
     });
   }
